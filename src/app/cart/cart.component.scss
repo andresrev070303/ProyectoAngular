@@ -1,0 +1,23 @@
+.card{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+h4,h6{
+    font-weight: 400;
+}
+.buttonCart {
+    background-color: #323232;
+    color: whitesmoke;
+    border: 1px solid #323232;
+    height: 36px;
+    border-left: 0;
+    /* Asegúrate de agregar cualquier otro estilo que desees copiar del botón "Buscar" */
+}

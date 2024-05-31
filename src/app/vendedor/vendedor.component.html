@@ -1,0 +1,23 @@
+<div class="vendedor">
+    <div *ngIf="!showLogin" class="signup">
+      <h1>Registrate como vendedor</h1>
+      <form #vendedorSignUp="ngForm" (ngSubmit)="signUp(vendedorSignUp.value)" class="common-form">
+        <input class="form-input" type="text" ngModel name="name" placeholder="Nombre" />
+        <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" />
+        <input class="form-input" type="text" name="email" ngModel placeholder="Email" />
+        <button class="form-button">Registrarse</button>
+        <a (click)="openLogin()" style="cursor: pointer;">Ya tienes una cuenta?</a>
+      </form>
+    </div>
+  
+    <!-- Login -->
+    <div *ngIf="showLogin" class="signup">
+      <h1>Log In</h1>
+      <form #vendedorLogin="ngForm" (ngSubmit)="signUp(vendedorLogin.value)" class="common-form">
+        <input class="form-input" type="text" name="email" ngModel placeholder="Email" />
+        <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" />
+        <button class="form-button">Log In</button>
+        <a (click)="openSignUp()" style="cursor: pointer;">No tienes una cuenta?</a>
+      </form>
+    </div>
+  </div>

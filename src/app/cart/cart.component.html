@@ -1,0 +1,60 @@
+<ng-container *ngIf="products.length!=0">
+    <div class="containeer">
+        <div class="card-table">
+     <div class="card-product">
+    <table class="table table-bordered ">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nombre</th>
+                <th>Producto</th>
+                <th>Descricion</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            
+
+
+            </tr>
+        </thead>
+
+        <tbody *ngFor="let item of products; let i =index">
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{item.name}}</td>
+                <td><img style="width:120px;" src="{{item.image}}">  </td>
+                <td>{{item.description}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.total}}</td>
+                <td><button class="btn btn-danger"(click)="delete(item)"><i class="fas fa-trash"></i> </button></td>
+
+            </tr>
+            <tr> 
+   
+
+</tr>
+    </tbody>
+    <td colspan="4"></td>
+    <td><button (click)="emptyCart()" class="buttonCart">Vaciar </button> </td>
+    <button (click)="navigateToHome()" class="buttonCart">Seguir comprando</button>
+    <td><strong>Total:{{grandTotal| currency:'BOB':'symbol':'5.0'}}</strong></td>
+    </table>
+   
+</div>
+
+        </div>
+    </div>
+</ng-container>
+
+
+
+<!--- empty cart-->
+
+<ng-container *ngIf="products.length==0">
+    <div class="center">
+        <h4>EL CARRITO ESTA VACIO!!</h4>
+        <h6>LLENALO DE PRODUCTOS</h6>
+        <button (click)="navigateToHome()" class="buttonCart">Comprar ahora</button>
+    </div>
+</ng-container>
