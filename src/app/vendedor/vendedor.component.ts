@@ -21,12 +21,8 @@ export class VendedorComponent implements OnInit {
   ngOnInit(): void {}
 
   signUp(data: SignUp): void {
-    console.warn(data);
-    this.vendedor.userSignUp(data).subscribe((result) => {
-      if (result) {
-        this.router.navigate(['vendedor-inicio']);
-      }
-    });
+    //console.warn(data);
+    this.vendedor.userSignUp(data);
   }
 
   openLogin(): void {

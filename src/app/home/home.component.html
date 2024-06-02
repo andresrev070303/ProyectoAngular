@@ -1,19 +1,25 @@
-<div class="container">
-    <div class="row">
-        <ng-container *ngFor="let item of productList">
-            <div class="card col-md-4">
-                <div class="image-container">
-                    <img src="{{item.image}}" alt="{{item.name}}" class="product-image">
+<div class="background"></div>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let item of productList">
+                <div class="card col-md-4">
+                    <div class="image-container">
+                        <img src="{{item.image}}" alt="{{item.name}}" class="product-image">
+                    </div>
+                    <h5 class="product-name" title="{{item.name}}">{{item.name}}</h5>
+                    <p ><strong class="product-description" title="{{item.description}}">{{item.description}}</strong></p>
+                    <p><strong class="product-name">Category:</strong> {{item.category}}</p>
+                    <p><strong class="product-name">Color:</strong> {{item.color}}</p>
+                    <p><strong class="product-name">Price:</strong> Bs. {{item.price}}</p>
+                    <button class="btn btn-dark"(click)="addtocart(item)">Add to cart </button>
                 </div>
-                <h5 class="product-name" title="{{item.name}}">{{item.name}}</h5>
-                <p ><strong class="product-description" title="{{item.description}}">{{item.description}}</strong></p>
-                <p><strong class="product-name">Category:</strong> {{item.category}}</p>
-                <p><strong class="product-name">Color:</strong> {{item.color}}</p>
-                <p><strong class="product-name">Price:</strong> Bs. {{item.price}}</p>
-                <button class="btn btn-dark"(click)="addtocart(item)">Add to cart </button>
-            </div>
-        </ng-container>
+            </ng-container>
+        </div>
     </div>
+  <div style="height: 100px;"></div>
 </div>
+
+   
 
 
