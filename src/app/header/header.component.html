@@ -1,12 +1,13 @@
 <nav class="nav">
     <i style="font-size: 30px; color:#323232; margin-left: 62px; margin-top: 0px;" class="fas fa-shipping-fast"></i>
-    <h1>T-VStore</h1>
-   
-    <div  class="nav-search">
+    <h1 routerLink="">T-VStore </h1>
+  <div *ngIf="menuType==='default'" class="nav-search">
         <input type="text" placeholder="Buscar productos" />
         <button>Buscar</button>
     </div>
-    <ul>
+    <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'" >
+        
         <li><a routerLink="/">Inicio</a></li>
         <li><a routerLink="vendedor">Vender</a></li>
         <li>
@@ -16,4 +17,11 @@
             </a>
         </li>
     </ul>
+
+    <ul *ngSwitchCase="'vendedor'" >
+        <li><a href="#">Add Product</a></li>
+        <li><a href="#">List</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+     </div>
 </nav>
