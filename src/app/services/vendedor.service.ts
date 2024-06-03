@@ -22,7 +22,7 @@ export class VendedorService {
   relaodVendedor() {
     if (localStorage.getItem('vendedor')) {
       this.isVendedorLoggedIn.next(true);
-      this.router.navigate(['/vendedor-inicio']);
+      this.router.navigate(['/vendedor']);
     }
   }
 

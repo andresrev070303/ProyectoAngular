@@ -18,7 +18,10 @@ export class VendedorComponent implements OnInit {
 
   constructor(private vendedor: VendedorService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.vendedor.relaodVendedor();
+  }
 
   signUp(data: SignUp): void {
     //console.warn(data);
