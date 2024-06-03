@@ -24,8 +24,13 @@ export class VendedorComponent implements OnInit {
   }
 
   signUp(data: SignUp): void {
-    //console.warn(data);
+    console.warn(data);
     this.vendedor.userSignUp(data);
+  }
+  login(data: SignUp): void {
+    //console.warn(data);
+    this.vendedor.userLogin(data);
+   
   }
 
   openLogin(): void {

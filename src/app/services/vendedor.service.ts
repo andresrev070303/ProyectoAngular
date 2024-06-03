@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { SignUp } from '../data-type';
+import { Login, SignUp } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router'
 @Injectable({
@@ -25,5 +25,20 @@ export class VendedorService {
       this.router.navigate(['/vendedor']);
     }
   }
+  userLogin(data: Login) {
+    console.warn(data);
+    this.http.get(`http://localhost:3000/vendedor?email=${data.email}&password=${data.password}`,
+      { observe: 'response' }
+    ).subscribe((result: any) => {
+      if (result && result.body && result.body.length) {
+        console.warn('Login Success');
+        localStorage.setItem('vendedor', JSON.stringify(result.body));
+        this.router.navigate(['/vendedor-inicio']);
+
+      } else {
+        console.warn('Login Failed');
+      }
+    });
+}
 
 }
