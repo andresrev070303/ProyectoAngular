@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
 export class VendedorComponent implements OnInit {
   showLogin = false;
-
+  authError:String='';
   constructor(private vendedor: VendedorService, private router: Router) {}
 
   ngOnInit(): void {
@@ -28,11 +28,13 @@ export class VendedorComponent implements OnInit {
     this.vendedor.userSignUp(data);
   }
   login(data: SignUp): void {
-    //console.warn(data);
     this.vendedor.userLogin(data);
-   
+    this.vendedor.isLoginError.subscribe((isError)=>{
+      if(isError){
+        this.authError="Email or password is not correct";
+      }
+    });
   }
-
   openLogin(): void {
     this.showLogin = true;
   }

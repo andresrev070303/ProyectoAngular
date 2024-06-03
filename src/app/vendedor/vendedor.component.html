@@ -1,6 +1,7 @@
 <div class="vendedor">
     <div *ngIf="!showLogin" class="signup">
       <h1>Registrate como vendedor</h1>
+      <p calss=""></p>
       <form #vendedorSignUp="ngForm" (ngSubmit)="signUp(vendedorSignUp.value)" class="common-form">
         <input class="form-input" type="text" ngModel name="name" placeholder="Nombre" />
         <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" />
@@ -13,6 +14,7 @@
     <!-- Login -->
     <div *ngIf="showLogin" class="signup">
       <h1>Log In</h1>
+      <p class="error-p">{{authError}}</p>
       <form #vendedorLogin="ngForm" (ngSubmit)="login(vendedorLogin.value)" class="common-form">
         <input class="form-input" type="text" name="email" ngModel placeholder="Email" />
         <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" />
