@@ -59,6 +59,12 @@
       "name": "Pedro",
       "password": "123",
       "email": "pedro@ejemplo.com"
+    },
+    {
+      "id": "d330",
+      "name": "Laura",
+      "password": "123",
+      "email": "laura@ejemplo.com"
     }
   ],
   "products": [

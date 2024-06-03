@@ -8,6 +8,7 @@ import { VendedorService } from './services/vendedor.service';
 import { NgFor } from '@angular/common';
 import { NgToastModule } from 'ng-angular-popup';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AddProductoComponent } from './add-producto/add-producto.component';
 
 
 
@@ -20,7 +21,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
      FormsModule,
      HttpClientModule,  
      NgFor, 
-     NgToastModule, ],
+     NgToastModule, AddProductoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
