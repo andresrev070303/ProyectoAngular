@@ -112,6 +112,33 @@
       "description": "Noise smart watch for man and women both",
       "image": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
       "id": "7"
+    },
+    {
+      "id": "91c9",
+      "name": "T-shirt Gucci",
+      "price": "200",
+      "category": "clothes",
+      "color": "white",
+      "description": "Beautiful clothe to wear",
+      "image": "https://exclusiveshopperu.com/wp-content/uploads/Gucci-logo-print-sweatshirt.jpg.webp"
+    },
+    {
+      "id": "5b06",
+      "name": "Adidas shoes",
+      "price": "200",
+      "category": "Shoes",
+      "color": "White",
+      "description": "The most beautiful shoes in the world",
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bbdb76691634cffb0295178fadc5fa7_9366/CourtJam_Control_Tennis_Shoes_White_ID1538_01_standard.jpg"
+    },
+    {
+      "id": "882a",
+      "name": "Iphone 15 Pro Max",
+      "price": "10000",
+      "category": "Cellphones",
+      "color": "Black",
+      "description": "Beautiful, camera, the best cellphone",
+      "image": "https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/8/h/8hdhj.png"
     }
   ]
 }
