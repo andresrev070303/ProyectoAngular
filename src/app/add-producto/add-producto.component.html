@@ -1,1 +1,52 @@
-<p>add-producto works!</p>
+<div class="add-product">
+    <h1>Agregar prducto</h1>
+    <form #addProduct="ngForm"
+    (ngSubmit)="submit(addProduct.value)"
+     class="common-form">
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Nombre de producto"
+        name="name"
+        ngModel
+      />
+      <input
+      type="text"
+      class="form-input"
+      placeholder="Precio"
+      name="price"
+      ngModel
+    />
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Categoria"
+    name="category"
+    ngModel
+  />
+  <input
+  type="text"
+  class="form-input"
+  placeholder="color"
+  name="color"
+  ngModel
+  />
+  <textarea
+  type="text"
+  class="form-input"
+  placeholder="Descripcion del producto"
+  name="description"
+  ngModel
+  ></textarea>
+  
+  <input
+  type="text"
+  class="form-input"
+  placeholder="URL de la imagen"
+  name="image"
+  ngModel
+  />
+  <button class="form-button">Agregar producto</button>
+  
+    </form>
+  </div>
