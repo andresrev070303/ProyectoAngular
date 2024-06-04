@@ -14,4 +14,7 @@ export class ProductService {
   listaProducts(){ 
     return this.http.get<product[]>('http://localhost:3000/products')
   }
+  borrarProduct(id: number){
+    return this.http.delete(`http://localhost:3000/products/${id}`)
+  }
 }

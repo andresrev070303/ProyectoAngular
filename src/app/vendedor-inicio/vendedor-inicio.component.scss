@@ -12,3 +12,18 @@ table td , table th{
     padding: 10px;
     min-width: 160pxs;
 }
+.delete-button {
+    background: none;
+    border: none;
+    color: red; /* Puedes cambiar el color según tu preferencia */
+    cursor: pointer;
+    margin-top: 1.2cm; /* Mueve el icono hacia abajo 1.5 cm */
+    display: inline-block; /* Asegura que el margin-top funcione correctamente */
+    font-size: x-large;
+  }
+  
+  .delete-button:hover {
+    color: darkred; /* Cambiar color al pasar el cursor */
+    
+  }
+  

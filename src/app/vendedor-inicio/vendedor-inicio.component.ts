@@ -13,13 +13,28 @@ import { NgFor } from '@angular/common';
 export class VendedorInicioComponent implements OnInit {
 
   listaProducts :undefined | product[];
+  productMessage : undefined | string;
   constructor(private product:ProductService) { }
 
   ngOnInit(): void {
+    this.lista();
+  }
+  borrarProduct(id: number){
+    console.warn(id);
+    this.product.borrarProduct(id).subscribe((result)=>{          
+      if(result){
+        this.productMessage = 'Producto Borrado';
+        this.lista();
+      }
+    });
+    setTimeout(()=>{
+      this.productMessage = undefined;
+    } , 3000)
+  }
+  lista(){
     this.product.listaProducts().subscribe((result)=>{
       console.warn(result);
       this.listaProducts = result;
     })
   }
-
 }
