@@ -18,9 +18,9 @@
         </ul>
         <ul *ngSwitchCase="'vendedor'">            
             <h2> Hola!, {{vendedorName}}</h2>
-            <li><a routerLink="add-producto">Add Product</a></li>
-            <li><a href="#">List</a></li>
-            <li><a (click)="logout()">Logout</a></li>
+            <li><a routerLink="add-producto">Agregar producto</a></li>
+            <li><a routerLink="vendedor-inicio">Lista de productos</a></li>
+            <li><a (click)="logout()">Salir</a></li>
         </ul>
     </div>
 </nav>

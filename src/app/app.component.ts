@@ -9,6 +9,7 @@ import { NgFor } from '@angular/common';
 import { NgToastModule } from 'ng-angular-popup';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AddProductoComponent } from './add-producto/add-producto.component';
+import { VendedorInicioComponent } from './vendedor-inicio/vendedor-inicio.component';
 
 
 
@@ -21,7 +22,7 @@ import { AddProductoComponent } from './add-producto/add-producto.component';
      FormsModule,
      HttpClientModule,  
      NgFor, 
-     NgToastModule, AddProductoComponent],
+     NgToastModule, AddProductoComponent, VendedorInicioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
