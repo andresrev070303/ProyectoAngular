@@ -26,4 +26,22 @@ table td , table th{
     color: darkred; /* Cambiar color al pasar el cursor */
     
   }
+  .update-button {
+    background: none;
+    border: none;
+    color: blue; /* Cambia el color según tu preferencia */
+    cursor: pointer;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: inline-flex; /* Alinea el contenido en línea */
+    align-items: center; /* Centra el icono verticalmente */
+  }
+  
+  .update-button i {
+    font-size: 24px; /* Ajusta este valor para cambiar el tamaño del icono */
+  }
+  
+  .update-button:hover {
+    color: darkblue; /* Cambia el color al pasar el cursor */
+  }
+  
   

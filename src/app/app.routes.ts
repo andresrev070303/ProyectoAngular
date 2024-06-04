@@ -7,6 +7,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CartComponent } from './cart/cart.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { AddProductoComponent } from './add-producto/add-producto.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 export const routes: Routes = [
@@ -36,7 +37,14 @@ export const routes: Routes = [
     path: 'add-producto',
     canActivate: [authGuard],
    
+},
+{
+    component: UpdateProductComponent,
+    path: 'vendedor-inicio/update-product/:id',
+    canActivate: [authGuard],
+   
 }
+
 
 ];
 

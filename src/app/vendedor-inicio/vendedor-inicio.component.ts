@@ -2,11 +2,13 @@ import { Component, OnInit} from '@angular/core';
 import { product } from '../data-type';
 import { ProductService } from '../services/product.service';
 import { NgFor } from '@angular/common';
+import { UpdateProductComponent } from '../update-product/update-product.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-vendedor-inicio',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,UpdateProductComponent,RouterModule],
   templateUrl: './vendedor-inicio.component.html',
   styleUrl: './vendedor-inicio.component.scss'
 })

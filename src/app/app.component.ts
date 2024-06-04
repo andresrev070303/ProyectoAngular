@@ -10,6 +10,7 @@ import { NgToastModule } from 'ng-angular-popup';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AddProductoComponent } from './add-producto/add-producto.component';
 import { VendedorInicioComponent } from './vendedor-inicio/vendedor-inicio.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 
 
@@ -22,7 +23,7 @@ import { VendedorInicioComponent } from './vendedor-inicio/vendedor-inicio.compo
      FormsModule,
      HttpClientModule,  
      NgFor, 
-     NgToastModule, AddProductoComponent, VendedorInicioComponent],
+     NgToastModule, AddProductoComponent, VendedorInicioComponent, UpdateProductComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
