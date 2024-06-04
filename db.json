@@ -69,11 +69,11 @@
   ],
   "products": [
     {
-      "name": "I phone 14",
-      "price": "100000",
-      "category": "mobile",
-      "color": "black",
-      "description": "An Apple Product",
+      "name": "Iphone 14",
+      "price": "10000",
+      "category": "Mobile",
+      "color": "Black",
+      "description": "Apple Product",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "id": "2"
     },
@@ -114,7 +114,7 @@
       "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bbdb76691634cffb0295178fadc5fa7_9366/CourtJam_Control_Tennis_Shoes_White_ID1538_01_standard.jpg"
     },
     {
-    "id": "882a",
+      "id": "882a",
       "name": "Iphone 15 Pro Max",
       "price": "10000",
       "category": "Cellphones",
