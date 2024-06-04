@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CartService } from '../cart.service';
-import { NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
+import { CommonModule, NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
+import { product } from '../data-type';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, NgIf, NgSwitchCase, NgSwitch],
+  imports: [RouterModule, NgIf, NgSwitchCase, NgSwitch,CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -15,8 +17,9 @@ export class HeaderComponent implements OnInit {
   menuType: String = 'default';
   public totalitem = 0;
   vendedorName: string = '';
+  searchResult:undefined|product[];
 
-  constructor(private cart: CartService, private router: Router) { }
+  constructor(private cart: CartService, private router: Router, private product: ProductService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -44,4 +47,25 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('vendedor');
     this.router.navigate(['/']);
   }
+  searchProduct(query:KeyboardEvent){
+    if(query){
+      const element = query.target as HTMLInputElement;
+      console.warn(element.value)
+      this.product.searchProduct(element.value).subscribe((result)=>{
+        console.warn(result);
+        if(result.length>5){
+          result.length=length
+        }
+        this.searchResult=result;
+      })
+    }
+  }
+  hideSearch(){
+    this.searchResult=undefined
+  }
+  submitSearch(val:string){
+    console.warn(val)
+  this.router.navigate([`search/${val}`]);
+  }
+  
 }

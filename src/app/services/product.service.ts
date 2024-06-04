@@ -23,4 +23,8 @@ export class ProductService {
   updateProduct( product: product){
     return this.http.put<product>(`http://localhost:3000/products/${product.id}`,product)
   }
+  searchProduct(query:string){
+    return this.http.get<product[]>(`http://localhost:3000/products?q=${query}`)
+   }
+
 }

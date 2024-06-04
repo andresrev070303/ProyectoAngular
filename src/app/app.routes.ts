@@ -8,6 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { AddProductoComponent } from './add-producto/add-producto.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { SearchComponent } from './search/search.component';
 
 
 export const routes: Routes = [
@@ -43,6 +44,10 @@ export const routes: Routes = [
     path: 'vendedor-inicio/update-product/:id',
     canActivate: [authGuard],
    
+},
+{
+    component: SearchComponent,
+    path:'search/:query'
 }
 
 
