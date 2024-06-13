@@ -9,6 +9,7 @@ import { NgToastModule } from 'ng-angular-popup';
 import { AddProductoComponent } from './add-producto/add-producto.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { SearchComponent } from './search/search.component';
+import { DetailsComponent } from './details/details.component';
 
 
 export const routes: Routes = [
@@ -48,8 +49,11 @@ export const routes: Routes = [
 {
     component: SearchComponent,
     path:'search/:query'
+},
+{
+  component: DetailsComponent,
+  path:'details/:id'  
 }
-
 
 ];
 

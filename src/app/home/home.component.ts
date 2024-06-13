@@ -3,18 +3,19 @@ import { NgFor } from '@angular/common';
 import { CartService } from '../cart.service';
 import { HomeService } from '../home.service'; 
 import { NgToastService } from 'ng-angular-popup';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   public productList: any;
-
-  constructor(private api: HomeService, private cart: CartService, private toast: NgToastService) {}
+  
+  constructor(private api: HomeService, private cart: CartService, private toast: NgToastService,) {}
 
   ngOnInit(): void {
     this.api.getproduct().subscribe(res => {

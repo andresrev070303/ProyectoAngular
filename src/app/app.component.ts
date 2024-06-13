@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +12,7 @@ import { AddProductoComponent } from './add-producto/add-producto.component';
 import { VendedorInicioComponent } from './vendedor-inicio/vendedor-inicio.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { SearchComponent } from './search/search.component';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -24,7 +25,7 @@ import { SearchComponent } from './search/search.component';
      FormsModule,
      HttpClientModule,  
      NgFor, 
-     NgToastModule, AddProductoComponent, VendedorInicioComponent, UpdateProductComponent, SearchComponent],
+     NgToastModule, AddProductoComponent, VendedorInicioComponent, UpdateProductComponent, SearchComponent, DetailsComponent, RouterModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

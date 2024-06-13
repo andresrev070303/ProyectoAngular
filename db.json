@@ -65,21 +65,24 @@
       "name": "Laura",
       "password": "123",
       "email": "laura@ejemplo.com"
+    },
+    {
+      "id": "ce3d",
+      "name": "Messi",
+      "password": "123",
+      "email": "messi@goat.com"
+    },
+    {
+      "id": "4051",
+      "name": "Messi",
+      "password": "123",
+      "email": "messi@goat.com"
     }
   ],
   "products": [
     {
-      "name": "Iphone 14",
-      "price": "10000",
-      "category": "Mobile",
-      "color": "Black",
-      "description": "Apple Product",
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
-      "id": "2"
-    },
-    {
       "name": "Nike Shoes",
-      "price": "3000",
+      "price": "1000",
       "category": "Shoes",
       "color": "Black",
       "description": "Best shoes for Running",

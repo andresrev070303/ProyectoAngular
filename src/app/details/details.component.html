@@ -1,0 +1,14 @@
+<div *ngIf="item" class="item-container">
+    <div class="item-image-container">
+      <img [src]="item.image" alt="{{ item.name }}" class="item-image">
+    </div>
+    <div class="item-details-container">
+      <h1>{{ item.name }}</h1>
+      <p><strong>Description:</strong> {{ item.description }}</p>
+      <p><strong>Category:</strong> {{ item.category }}</p>
+      <p><strong>Color:</strong> {{ item.color }}</p>
+      <p><strong>Price:</strong> Bs. {{ item.price }}</p>
+      <button class="btn btn-dark add-to-cart-btn" (click)="addtocart(item)">Add to Cart</button>
+    </div>
+  </div>
+  

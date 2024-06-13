@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   public totalitem = 0;
   vendedorName: string = '';
   searchResult:undefined|product[];
-
   constructor(private cart: CartService, private router: Router, private product: ProductService) { }
 
   ngOnInit(): void {

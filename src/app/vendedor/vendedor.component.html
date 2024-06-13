@@ -1,26 +1,25 @@
 <div class="vendedor">
-    <div *ngIf="!showLogin" class="signup">
-      <h1>Registrate como vendedor</h1>
-      <p calss=""></p>
-      <form #vendedorSignUp="ngForm" (ngSubmit)="signUp(vendedorSignUp.value)" class="common-form">
-        <input class="form-input" type="text" ngModel name="name" placeholder="Nombre" />
-        <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" />
-        <input class="form-input" type="text" name="email" ngModel placeholder="Email" />
-        <button class="form-button">Registrarse</button>
-        <a (click)="openLogin()" style="cursor: pointer;">Ya tienes una cuenta?</a>
-      </form>
-    </div>
-  
-    <!-- Login -->
-    <div *ngIf="showLogin" class="signup">
-      <h1>Log In</h1>
-      <p class="error-p">{{authError}}</p>
-      <form #vendedorLogin="ngForm" (ngSubmit)="login(vendedorLogin.value)" class="common-form">
-        <input class="form-input" type="text" name="email" ngModel placeholder="Email" />
-        <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" />
-        <button class="form-button">Log In</button>
-        <a (click)="openSignUp()" style="cursor: pointer;">No tienes una cuenta?</a>
-      </form>
-    </div>
-    
+  <!-- Registro -->
+  <div *ngIf="!showLogin" class="signup">
+    <h1>Registrate como vendedor</h1>
+    <form #vendedorSignUp="ngForm" (ngSubmit)="signUp(vendedorSignUp.value)" class="common-form">
+      <input class="form-input" type="text" ngModel name="name" placeholder="Nombre" required />
+      <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" required />
+      <input class="form-input" type="email" name="email" ngModel placeholder="Email" required />
+      <button class="form-button">Registrarse</button>
+      <a (click)="openLogin()" style="cursor: pointer;">Ya tienes una cuenta?</a>
+    </form>
   </div>
+
+  <!-- Login -->
+  <div *ngIf="showLogin" class="signup">
+    <h1>Log In</h1>
+    <p class="error-p">{{authError}}</p>
+    <form #vendedorLogin="ngForm" (ngSubmit)="login(vendedorLogin.value)" class="common-form">
+      <input class="form-input" type="email" name="email" ngModel placeholder="Email" required />
+      <input class="form-input" type="password" name="password" ngModel placeholder="Contraseña" required />
+      <button class="form-button">Log In</button>
+      <a (click)="openSignUp()" style="cursor: pointer;">No tienes una cuenta?</a>
+    </form>
+  </div>
+</div>
