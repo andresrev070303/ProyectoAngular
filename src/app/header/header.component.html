@@ -3,14 +3,16 @@
     <h1 routerLink="">T-VStore</h1>
     <div *ngIf="menuType === 'default'" class="nav-search">
         <input type="text"
-        #searchInput
-        (keyup)="searchProduct($event)" (blur)="hideSearch()" placeholder="Search Products" />
-        <button (click)="submitSearch(searchInput.value)" >Buscar</button>
+            #searchInput
+            (keyup)="searchProduct($event)" 
+            (blur)="hideSearch()" 
+            placeholder="Search Products" />
+        <button (click)="submitSearch(searchInput.value)">Buscar</button>
         <ul class="suggested-search" *ngIf="searchResult">
             <li *ngFor="let item of searchResult">
-              <a >{{item.name}}</a>
+                <a (click)="submitSearch(item.name)">{{item.name}}</a>
             </li>
-          </ul>
+        </ul>
     </div>
     <div [ngSwitch]="menuType">
         <ul *ngSwitchCase="'default'">

@@ -46,25 +46,20 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('vendedor');
     this.router.navigate(['/']);
   }
-  searchProduct(query:KeyboardEvent){
+  searchProduct(query: KeyboardEvent){
     if(query){
       const element = query.target as HTMLInputElement;
-      console.warn(element.value)
-      this.product.searchProduct(element.value).subscribe((result)=>{
-        console.warn(result);
-        if(result.length>5){
-          result.length=length
-        }
-        this.searchResult=result;
-      })
+      this.product.searchProduct(element.value).subscribe((result) => {
+        this.searchResult = result.length > 5 ? result.slice(0, 5) : result;
+      });
     }
   }
+
   hideSearch(){
     this.searchResult=undefined
   }
-  submitSearch(val:string){
-    console.warn(val)
-  this.router.navigate([`search/${val}`]);
+  submitSearch(val: string) {
+    this.router.navigate([`search/${val}`]);
   }
   
 }
