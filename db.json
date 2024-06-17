@@ -7,74 +7,26 @@
       "password": "123"
     },
     {
-      "id": "6518",
-      "name": "asd",
-      "password": "asdasd",
-      "email": "sadas"
-    },
-    {
-      "id": "311b",
-      "name": "Fernando",
-      "password": "123",
-      "email": "fernando@test.com"
-    },
-    {
-      "id": "6027",
-      "name": "Fernando",
-      "password": "123",
-      "email": "fernando@test.com"
-    },
-    {
-      "id": "f771",
-      "name": "dsfsd",
-      "password": "sdsa",
-      "email": "scsdda"
-    },
-    {
-      "id": "c5f5",
-      "name": "asdas",
-      "password": "sadas",
-      "email": "sadas"
-    },
-    {
-      "id": "3994",
-      "name": "asdasd",
-      "password": "hkjhk",
-      "email": "hjhk"
-    },
-    {
-      "id": "6a26",
-      "name": "asdasd",
-      "password": "hkjhk",
-      "email": "hjhk"
-    },
-    {
-      "id": "398d",
-      "name": "asdasd",
-      "password": "hkjhk",
-      "email": "hjhk"
-    },
-    {
-      "id": "1bf4",
-      "name": "Pedro",
-      "password": "123",
-      "email": "pedro@ejemplo.com"
-    },
-    {
       "id": "d330",
       "name": "Laura",
       "password": "123",
       "email": "laura@ejemplo.com"
     },
     {
-      "id": "ce3d",
-      "name": "Messi",
-      "password": "123",
-      "email": "messi@goat.com"
+      "id": "c6c0",
+      "name": "",
+      "password": "",
+      "email": ""
     },
     {
-      "id": "4051",
-      "name": "Messi",
+      "id": "04d4",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "6279",
+      "name": "messi",
       "password": "123",
       "email": "messi@goat.com"
     }
@@ -87,7 +39,8 @@
       "color": "Black",
       "description": "Best shoes for Running",
       "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
-      "id": "4"
+      "id": "4",
+      "id_vendedor": "631a"
     },
     {
       "name": "Noise Smart Watch",
@@ -96,7 +49,8 @@
       "color": "Black",
       "description": "Noise smart watch for man and women both",
       "image": "https://www.reliancedigital.in/medias/Noise-Colorfit-Pro-2-Smart-Watch-491900986-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MDc0NXxpbWFnZS9qcGVnfGltYWdlcy9oYzkvaDdjLzk1OTE4MjA3NDY3ODIuanBnfDA3MjZlMzkzOTExYzMyNzk5Y2YzOTk0MWFkMjc5YjE5OTlkMDE4NzYzYTg1YzQ2YmNjZjMxYzc5ZDJiYjBlNDg",
-      "id": "7"
+      "id": "7",
+      "id_vendedor": "631a"
     },
     {
       "id": "91c9",
@@ -105,7 +59,8 @@
       "category": "clothes",
       "color": "white",
       "description": "Beautiful clothe to wear",
-      "image": "https://exclusiveshopperu.com/wp-content/uploads/Gucci-logo-print-sweatshirt.jpg.webp"
+      "image": "https://images.fashiola.es/product-list/300x450/luisaviaroma/622023855/hombre-camiseta-oversize-de-jersey-de-algodon-xs.webp",
+      "id_vendedor": "631a"
     },
     {
       "id": "5b06",
@@ -114,7 +69,8 @@
       "category": "Shoes",
       "color": "White",
       "description": "The most beautiful shoes in the world",
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bbdb76691634cffb0295178fadc5fa7_9366/CourtJam_Control_Tennis_Shoes_White_ID1538_01_standard.jpg"
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bbdb76691634cffb0295178fadc5fa7_9366/CourtJam_Control_Tennis_Shoes_White_ID1538_01_standard.jpg",
+      "id_vendedor": "d330"
     },
     {
       "id": "882a",
@@ -123,7 +79,38 @@
       "category": "Cellphones",
       "color": "Black",
       "description": "Beautiful, camera, the best cellphone",
-      "image": "https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/8/h/8hdhj.png"
+      "image": "https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/8/h/8hdhj.png",
+      "id_vendedor": "d330"
+    },
+    {
+      "id": "a13a",
+      "name": "Lavadora",
+      "price": "5000",
+      "category": "Electrodomesticos",
+      "color": "Negro",
+      "description": "Lavadora, soporta hasta 11kilos ",
+      "image": "https://www.lg.com/cac/images/lavadoras-y-secadoras/md07585147/md07585147-350x350.jpg",
+      "id_vendedor": "d330"
+    },
+    {
+      "id": "3b39",
+      "name": "Lavadora",
+      "price": "100",
+      "category": "lavadoras usadas",
+      "color": "blanco ",
+      "description": "lavadora bonita",
+      "image": "https://www.lg.com/cac/images/lavadoras-y-secadoras/md07594422/md07594422-350x350.jpg",
+      "id_vendedor": "631a"
+    },
+    {
+      "id": "79e8",
+      "name": "Huawei Pura 70 Ultra",
+      "price": "8000",
+      "category": "Celulares",
+      "color": "Blanco",
+      "description": "Celular huawei pura 70 ultra original sellada en caja con cargador ",
+      "image": "data:image/jpeg;base64,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",
+      "id_vendedor": "6279"
     }
   ]
 }

@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const url = event.url;
-        if (localStorage.getItem('vendedor') && 
+        if (localStorage.getItem('vendedorId') && 
             (url.includes('vendedor-inicio') || url.includes('add-producto') || url.includes('update-product'))) {
           console.warn('this is seller area');
           this.menuType = 'vendedor';

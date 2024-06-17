@@ -20,7 +20,10 @@ export class AddProductoComponent implements OnInit {
 
   submit(data:product){
 
+    data.id_vendedor=localStorage.getItem('vendedorId')!;
+    console.log('data',data);
     this.product.addProduct(data).subscribe((result)=>{
+      
       console.warn('result',result);
       if(result){
         this.addProductMessage='Se agrego el producto correctamente';

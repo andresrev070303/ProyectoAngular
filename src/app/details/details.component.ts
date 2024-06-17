@@ -32,15 +32,18 @@ export class DetailsComponent implements OnInit {
       });
     }
     this.api.getproduct().subscribe(res => {
+
       this.productList = res;
 
       this.productList.forEach((a: any) => {
         Object.assign(a, { quantity: 1, total: a.price });
       });
     });
+    console.log(this.productList);
   }
 
   addtocart(product: any) {
+    Object.assign(product, { quantity: 1, total: product.price });
     this.toast.success('Se agrego el producto al carrito');
     this.cart.addtocart(product);
     console.log('Producto agregado al carrito:', product);

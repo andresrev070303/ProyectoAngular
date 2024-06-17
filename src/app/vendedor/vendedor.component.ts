@@ -20,7 +20,7 @@ export class VendedorComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.vendedor.relaodVendedor();
+    this.vendedor.reloadVendedor();
   }
 
   signUp(data: SignUp): void {

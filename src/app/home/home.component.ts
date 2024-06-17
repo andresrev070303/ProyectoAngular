@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
         Object.assign(a, { quantity: 1, total: a.price });
       });
     });
+    console.log(this.productList);
   }
 
   addtocart(product: any) {

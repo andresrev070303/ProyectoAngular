@@ -12,34 +12,33 @@ export class VendedorService {
   constructor(private http: HttpClient, private router: Router) { }
   userSignUp(data: SignUp) {
     this.http
-      .post('http://localhost:3000/vendedor',
-        data, { observe: 'response' }
-      ).subscribe((result) => {
-        this.isVendedorLoggedIn.next(true);
-        localStorage.setItem('vendedor', JSON.stringify(result.body));
-        this.router.navigate(['/vendedor-inicio']);
+      .post('http://localhost:3000/vendedor', data, { observe: 'response' })
+      .subscribe((result: any) => {
+        if (result && result.body) {
+          this.isVendedorLoggedIn.next(true);
+          const vendedor = result.body;
+          localStorage.setItem('vendedorId', vendedor.id);  
+          this.router.navigate(['/vendedor-inicio']);
+        }
       });
   }
-  relaodVendedor() {
+  reloadVendedor() {
     if (localStorage.getItem('vendedor')) {
       this.isVendedorLoggedIn.next(true);
-      this.router.navigate(['/vendedor']);
+      this.router.navigate(['/vendedor-inicio']);
     }
   }
   userLogin(data: Login) {
-    console.warn(data);
-    this.http.get(`http://localhost:3000/vendedor?email=${data.email}&password=${data.password}`,
-      { observe: 'response' }
-    ).subscribe((result: any) => {
-      if (result && result.body && result.body.length) {
-        console.warn('Login Success');
-        localStorage.setItem('vendedor', JSON.stringify(result.body));
-        this.router.navigate(['/vendedor-inicio']);
-
-      } else {
-        this.isLoginError.emit(true)
-        console.warn('Login Failed');
-      }
-    });
-}
+    this.http.get(`http://localhost:3000/vendedor?email=${data.email}&password=${data.password}`, { observe: 'response' })
+      .subscribe((result: any) => {
+        if (result && result.body && result.body.length) {
+          const vendedor = result.body[0];
+          this.isVendedorLoggedIn.next(true);
+          localStorage.setItem('vendedorId', vendedor.id);  
+          this.router.navigate(['/vendedor-inicio']);
+        } else {
+          this.isLoginError.emit(true);
+        }
+      });
+  }
 }
